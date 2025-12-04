@@ -1,0 +1,197 @@
+[
+  {
+    "model": "access_control.role",
+    "pk": 1,
+    "fields": {
+      "name": "admin",
+      "description": "Администратор системы"
+    }
+  },
+  {
+    "model": "access_control.role",
+    "pk": 2,
+    "fields": {
+      "name": "user",
+      "description": "Обычный пользователь"
+    }
+  },
+  {
+    "model": "access_control.role",
+    "pk": 3,
+    "fields": {
+      "name": "manager",
+      "description": "Менеджер"
+    }
+  },
+  {
+    "model": "access_control.bussinesselement",
+    "pk": 1,
+    "fields": {
+      "code": "users",
+      "name": "Users"
+    }
+  },
+  {
+    "model": "access_control.bussinesselement",
+    "pk": 2,
+    "fields": {
+      "code": "roles",
+      "name": "Roles"
+    }
+  },
+  {
+    "model": "access_control.bussinesselement",
+    "pk": 3,
+    "fields": {
+      "code": "access_rules",
+      "name": "Access Rules"
+    }
+  },
+  {
+    "model": "access_control.accessrule",
+    "pk": 1,
+    "fields": {
+      "role": 1,
+      "element": 1,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": true,
+      "delete_all_permission": true
+    }
+  },
+  {
+    "model": "access_control.accessrule",
+    "pk": 2,
+    "fields": {
+      "role": 1,
+      "element": 2,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": true,
+      "delete_all_permission": true
+    }
+  },
+  {
+    "model": "access_control.accessrule",
+    "pk": 3,
+    "fields": {
+      "role": 1,
+      "element": 3,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": true,
+      "delete_all_permission": true
+    }
+  },
+  {
+    "model": "access_control.accessrule",
+    "pk": 4,
+    "fields": {
+      "role": 3,
+      "element": 1,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": false,
+      "update_permission": false,
+      "update_all_permission": false,
+      "delete_permission": false,
+      "delete_all_permission": false
+    }
+  },
+  {
+    "model": "access_control.accessrule",
+    "pk": 5,
+    "fields": {
+      "role": 3,
+      "element": 2,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": false,
+      "update_permission": false,
+      "update_all_permission": false,
+      "delete_permission": false,
+      "delete_all_permission": false
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+      "email": "test@example.com",
+      "password": "pbkdf2_sha256$600000$da87266aec4d0d6e899af7f0$qsV46L4ics6ZIhtlsQU+JWRuX9uHCJUl5aTgEbEU/Dw=",
+      "first_name": "Test",
+      "last_name": "User",
+      "middle_name": "",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "role": 1
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+      "email": "test2@example.com",
+      "password": "pbkdf2_sha256$600000$da87266aec4d0d6e899af7f0$qsV46L4ics6ZIhtlsQU+JWRuX9uHCJUl5aTgEbEU/Dw=",
+      "first_name": "Test2",
+      "last_name": "User2",
+      "middle_name": "",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+      "email": "adminik@example.com",
+      "password": "pbkdf2_sha256$600000$f303b5659ae58048b56d5b11$khvtlnf/sA3z+7aApIn5B6PUvxqxovMF+pC1DKM50f4=",
+      "first_name": "Admin",
+      "last_name": "Super",
+      "middle_name": "",
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": true,
+      "role": 1
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 4,
+    "fields": {
+      "email": "second@example.com",
+      "password": "pbkdf2_sha256$600000$a45f3b6ef82a0d5cb633c9fa$yvXBCxESXd5fnPrF1VXO4+dPXzC94r0Y7036QCJWsrM=",
+      "first_name": "Second",
+      "last_name": "User",
+      "middle_name": "",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 5,
+    "fields": {
+      "email": "third@example.com",
+      "password": "pbkdf2_sha256$600000$bc0fc6a447a9b24356a9e390$qe9KpIPbgyv+Wh++e/Uws4bStaxJW5/KHiaBzVHsuNU=",
+      "first_name": "Third",
+      "last_name": "User",
+      "middle_name": "",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false
+    }
+  }
+]
